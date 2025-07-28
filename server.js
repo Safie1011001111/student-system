@@ -7,6 +7,7 @@ const authRoutes = require('./routes/auth');
 const activityRoutes = require('./routes/activities');
 const notificationRoutes = require('./routes/notifications');
 const aiCompanionRoutes = require('./routes/aiCompanion');
+const s3UploadRoutes = require('./routes/s3Upload');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,6 +28,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/activities', activityRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/ai-companion', aiCompanionRoutes);
+app.use('/api/s3', s3UploadRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
