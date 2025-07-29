@@ -1,4 +1,4 @@
-CREATE DATABASE student_activity_db;
+-- CREATE DATABASE student_activity_db;
 
 -- Users table (นักเรียน + ครู)
 CREATE TABLE users (
