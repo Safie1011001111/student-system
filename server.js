@@ -14,12 +14,13 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(helmet());
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://frontend-alpha-sand-90.vercel.app/']
-    : ['http://localhost:3000'],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: process.env.NODE_ENV === 'production' 
+//     ? ['https://frontend-alpha-sand-90.vercel.app/']
+//     : ['http://localhost:3000'],
+//   credentials: true
+// }));
+app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
